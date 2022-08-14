@@ -1,0 +1,41 @@
+
+				<!DOCTYPE HTML>
+				<html>
+				
+				<head>
+					<title>Running puppy</title>
+					<h1>Running Puppy</h1>
+				  <style>
+					#puppy {
+					  position: relative;
+					  cursor: pointer;
+					}
+				  </style>
+				</head>
+				
+				<body>
+				
+					<img id="puppy" src="images/puppy.gif">
+				
+				
+				  <script>
+					puppy.onload = function() {
+					  let start = Date.now();
+				
+					  let timer = setInterval(function() {
+						let timePassed = Date.now() - start;
+				
+						puppy.style.left = timePassed / 5 + 'px';
+				
+						if (timePassed > 6000) clearInterval(timer);
+				
+					  }, 60);
+					}
+				  </script>
+				
+				
+				</body>
+				
+				</html>
+
+			

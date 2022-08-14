@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+	<head>
+		
+		<link href="css/Lab10_part1.css" rel="stylesheet">
+		<meta name="author" content="Bambang">
+		<meta charset="utf-8">
+		<!DOCTYPE html>
+
+		<!DOCTYPE html>
+
+		
+			
+			<title>Change color</title>
+			
+			<style>
+			
+			table{
+			
+			border-collapse: collapse;
+			
+			}
+			
+			td{
+			
+			padding: 10px 15px;
+			
+			}
+			
+			</style>
+			
+			</head>
+			
+			<body>
+			
+			<table border="2">
+			
+			<tr>
+			
+			<td>
+			
+			<h4>change the font color</h4>
+			
+			<input type="radio" value="red" name="color" id="red">
+			
+			<label for="red">Red</label>
+			
+			<input type="radio" value="green" name="color" id="green">
+			
+			<label for="green" checked>Green</label>
+			
+			<input type="radio" value="blue" name="color" id="blue">
+			
+			<label for="blue">Blue</label>
+			
+			</td>
+			
+			<td rowspan="2" id="outer_target"><h3 id="inner_target">CSIC 1280</h3></td>
+			
+			</tr>
+			
+			<tr>
+			
+			<td>
+			
+			<h4>change the background color</h4>
+			
+			<select name="backcolor" id="backcolor">
+			
+			<option value="white">select background color</option>
+			
+			<option value="red">Red</option>
+			
+			<option value="green">Green</option>
+			
+			<option value="blue">Blue</option>
+			
+			</select>
+			
+			</td>
+			
+			</tr>
+			
+			</table>
+			
+			<script>
+			
+			let list = document.getElementById('backcolor');
+			
+			let radios = document.getElementsByName('color');
+			
+			let fontcolor = document.getElementById('inner_target');
+			
+			let backcolor = document.getElementById('outer_target');
+			
+			radios.forEach((radio)=>{
+			
+			radio.addEventListener('change',()=>{
+			
+			fontcolor.style.color = radio.value//chnage font color on on chnage event
+			
+			})
+			
+			})
+			
+			list.addEventListener('change',()=>{
+			
+			backcolor.style.background = list.value//chnage background color on on chnage event
+			
+			})
+			
+			</script>
+			
+			</body>
+			
+			</html>
